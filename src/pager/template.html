@@ -1,0 +1,13 @@
+<div class="pager">
+	当前页：{{curpage}}
+	<!-- 第一页 -->
+	<a class="first-page" @click="setPage(1)">第一页</a>
+	<!-- 上一页 -->
+    <a class="prev-page" :class="{'disabled':curpage==1}"  @click="setPage(curpage-1)">上一页</a>
+    <!-- 下一页 -->
+    <a class="next-page" :class="{'disabled':curpage==total}" @click="setPage(curpage+1)">下一页</a>
+		<!-- 最后页 -->
+		<a class="last-page" @click="setPage(total)">最后页</a>
+		<!-- 跳到指定页 -->
+    <span class="goto-page"><em>到</em><input type="text" v-model="gotoVal" @keyup.enter="setPage(gotoVal)"/><em>页</em><a class="btn-go" @click="setPage(gotoVal)">确定</a></span>
+</div>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+	.imglist{
+		width: 94%;
+		margin: 0 auto;
+	}
+	.imglist li{
+		margin-bottom: 10px;
+		overflow: hidden;
+		list-style: none;
+	}
+	.imglist li .left-img{
+		float: left; 
+	}
+	.imglist li .right-info{
+		float: left;
+		margin-left: 20px;
+	}
+	.imglist li img{
+		width: 400px;
+	}
+	</style>
+</head>
+<body>
+	<div class="mod-container">
+		<button @click="sort(true)">日期升序</button>
+		<button @click="sort(false)">日期降序</button>
+		<button @click="filter(0)">筛选所有</button>
+		<button @click="filter(1)">筛选空内容</button>
+		<button @click="filter(2)">筛选非空内容</button>
+		<pager :total="total" :change="changePage"></pager>
+		<filter></filter>
+		<!-- 数据列表 -->
+	    <ul class="imglist">
+	    	<li v-for="item in list" track-by="$index">
+	    		<div class="left-img">
+	    			<img v-bind:src="item.image" alt="">
+	    		</div>
+	    		<div class="right-info">
+		    		<p>{{item.day}}</p>
+		    		<p>{{item.content}}	</p>   			
+	    		</div>
+	    	</li>	    	
+	    </ul>		
+	</div>
+	<script src="dist/index.js"></script>
+</body>
+</html>

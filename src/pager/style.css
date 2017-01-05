@@ -1,0 +1,58 @@
+.yug-right{
+	float: right;
+}
+.pager{
+	height: 43px;
+	margin-top: 20px;
+	color: #666;
+}
+.pager input{
+	width: 28px;
+	line-height: 28px;
+	height: 28px;
+	margin: 0 5px;
+	border: 1px solid #e8e8e8;
+	text-align: center;
+}
+.pager .btn-go{
+	width: 48px;
+	height: 28px;
+	line-height: 28px;
+	border: 1px solid #e8e8e8;
+	border-radius: 4px;
+	margin-left: 5px;
+	text-align: center;
+	font-size: 14px;
+	color: #666;
+}
+.pager em{
+	height: 28px;
+	line-height: 28px;
+}
+.pager .page-num{
+	float: left;
+	border: 1px solid #ccc;
+	width: 28px;
+	line-height: 28px;
+	text-align: center;
+	color: #666;
+	font-family: 'Arial';
+}
+.pager .page-num:hover{
+  border: 1px solid #027cff;
+  color: #027cff;
+  z-index: 2;
+  text-decoration: none;		
+}
+.pager .page-num.active{
+	color: #027cff;
+}
+.pager .page-ellipsis{
+	float: left;		
+	color: #666;
+	line-height: 28px;
+	margin: 0 8px;
+}
+.disabled{
+	color: #ddd;
+}
